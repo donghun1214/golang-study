@@ -67,5 +67,7 @@ func (b *BasicJudger) Judge(code string) JudgeResult {
 	}
 
 	// TODO: 채점 결과를 JudgeResult 구조체 반환
-
+	return JudgeResult{
+		Result: b.grader.CheckAnswer(string(execOutput), "hello"),
+	}
 }

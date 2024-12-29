@@ -18,4 +18,10 @@ func NewBasicGrader() BasicGrader {
 }
 
 // TODO: 정답 체크 함수 완성
-func (b *BasicGrader) CheckAnswer(target string, answer string) int {}
+func (b *BasicGrader) CheckAnswer(target string, answer string) int {
+	if target == answer {
+		return ResultAccept
+	} else {
+		return ResultFail
+	}
+}
